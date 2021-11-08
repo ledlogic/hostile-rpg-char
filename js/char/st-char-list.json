@@ -1,0 +1,12 @@
+{
+	"characters": [
+		{
+			"name": "Monica Gellar",
+			"uri": "st-monica-gellar.json"
+		},
+		{
+			"name": "Ross Gellar",
+			"uri": "st-ross-gellar.json"
+		}
+	]	
+}
