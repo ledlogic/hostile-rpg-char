@@ -13,54 +13,28 @@ st.render = {
 		
 		that.renderReset();		
 		that.renderOverview();
-		that.renderDemographics();
-		that.renderStress();
 		that.renderAttributes();
-		that.renderCombat();
-		that.renderSkills();
-		that.renderGrid();
 		
 		$(".st-page").removeClass("st-initial-state");
 	},
 	renderReset: function() {
+		st.log("render reset");
 		st.render.$pageft.html("");
-	},
-	renderAttrClass: function(key, val) {
-		if (key == "hp") {
-			return "";
-		}
-		switch (true) {
-			case val < 5:
-				return "st-low-attr";
-				break;
-			case val < 15:
-				return "st-mid-attr";
-				break;
-			default:
-				return "st-high-attr";
-				break;
-		}
 	},
 	renderAttributes: function() {
 		st.log("rendering attributes");
 
-		var spec = st.character.spec;
-		var attr = spec.attributes;
+		var profile = st.character.data.profile;
 
 		// attr
 		var $attr = $("<div class=\"st-section st-attributes\"></div>");
-		_.each(attr, function(value, key) {
-			if (key == "hp") {
-				return;
-			}
-			
-			var desc = st.stat.descriptions[key];
-			
-			var valueRangeClass = st.render.renderAttrClass(key, value);
-			
+		_.each(profile[0], function(value, key) {
+			var hexValue = value.toString(16);
+			var mod = st.character.dm(value);
+			var modClass = st.render.modClass(mod);
 			var h = "<span class=\"st-attribute-label\">" + key + "</span> "
-			      + "<span class=\"st-attribute-value " + valueRangeClass + "\">" + value + "</span>"
-			      + "<span class=\"st-attribute-description\">" + desc + "</span>";
+			      + "<span class=\"st-attribute-value " + modClass + "\">" + hexValue + "</span>"
+			      + "<span class=\"st-attribute-mod " + modClass + "\">[" + mod + "]</span>";
 			var $elm = $("<span class=\"st-item st-attribute st-attribute-" + key + "\">" + h + "</span>");
 			$attr.append($elm);
 		});
@@ -68,98 +42,30 @@ st.render = {
 		
 	    $(".st-attribute-label").lettering();
 	},
-	renderCombat: function() {
-		st.log("rendering combat");
-		
-		st.character.spec.combat = {
-			"hth": st.character.calcHth(),
-			"pbr": st.character.calcPointBlankRng(),
-			"rng": st.character.calcRng(),
-			"cap": st.character.calcLoad(),
-			"psi": st.character.calcPsi(),
-			"hp": st.character.spec.attributes["hp"]
-		};
-
-		var spec = st.character.spec;
-		var attr = spec.combat;
-
-		// attr
-		var $attr = $("<div class=\"st-section st-combat\"></div>");
-		_.each(attr, function(value, key) {
-			var h = "<span class=\"st-attribute-label\">" + key + "</span> "
-			      + "<span class=\"st-attribute-value\">" + value + "</span>";
-			var $elm = $("<span class=\"st-item st-attribute st-attribute-" + key + "\">" + h + "</span>");
-			$attr.append($elm);
-		});
-		st.render.$pageft.append($attr);
-		
-		
-		var $hpbox = $("<div class=\"st-section st-hp-box\"></div>");
-		st.render.$pageft.append($hpbox);
-		
-	    $(".st-attribute-label").lettering();
-	},
-	renderDemographics: function() {
-		st.log("rendering demographics");
-
-		var spec = st.character.spec;
-		var demographics = spec.demographics;
-		
-		// page
-		var $demographics = $("<div class=\"st-section st-demographics\"></div>");
-		_.each(demographics, function(value, key) {
-			var h = "<span class=\"st-demographic-label\">" + key + "</span> "
-		          + "<span class=\"st-demographic-value\">" + value + "</span>";
-			
-			var $elm = $("<span class=\"st-item st-demographics-item st-demographics-item-" + key + "\">" + h + "</span>");
-			$demographics.append($elm);
-		});
-		st.render.$pageft.append($demographics);
-	},
-	renderGrid: function() {
-		st.log("rendering grid");
-		
-		var spec = st.character.spec;
-		var equipment = spec.equipment;
-		
-		// equipment
-		var h = [];
-		if (equipment) {
-			h.push("<h5>Equipment</h5>");
-			h.push("<ul>");
-			for (var i=0; i<equipment.length; i++) {
-				var ds = [];
-				_.each(equipment[i], function(value, key) {
-					if (key == "name") {
-						ds.push("<dt class=\"st-equipment-name\">" + value + "</dt>");
-					} else {
-						ds.push("<dt>" + key + ":</dt>");
-						ds.push("<dd>" + value + "</dd>");
-					}
-				});
-				h.push("<li class=\"st-equipment-item\">"
-					+ ds.join("\n")
-					+ "</li>");		
-			}
-			h.push("</ul>");
+	modClass: function(mod) {
+		var ret = "";
+		switch(true) {
+			case (mod == 0):
+				ret = "st-mid-attr";
+			    break;
+			case (mod < 0):
+				ret = "st-low-attr";
+			    break;
+			case (mod > 0):
+				ret = "st-high-attr";
+			    break;
 		}
-		
-		// page
-		var $grid = $("<div class=\"st-section st-grid\">"
-				  + h.join("\n")
-				  + "</div>");		
-		
-		st.render.$pageft.append($grid);
+		return ret;	
 	},
 	renderOverview: function() {
 		st.log("rendering overview");
 
-		var spec = st.character.spec;
-		var overview = spec.overview;
+		var meta = st.character.data.meta;
+		//st.log(["meta", meta]);
 
 		// page
 		var $overview = $("<div class=\"st-section st-overview\"></div>");
-		_.each(overview, function(value, key) {
+		_.each(meta[0], function(value, key) {
 			var h = "<span class=\"st-overview-label\">" + key + "</span> "
 			      + "<span class=\"st-overview-value\">" + value + "</span>";
 			if (h.indexOf(",") > -1) {
@@ -178,7 +84,6 @@ st.render = {
 		st.log("rendering skills");
 
 		var spec = st.character.spec;
-
 		var skills = spec.skills;
 		
 		// there are three sets of skills, to match the display

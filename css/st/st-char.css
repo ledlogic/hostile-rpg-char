@@ -45,22 +45,12 @@
 	border: 1px solid transparent;
 }
 
-/* allegiance */
-
-.st-allegiance {
-	position: relative;
-}
-
-.st-allegiance img {
-	border: 1px solid #333 !important;
-}
-
 /* overview */
 
 .st-overview {
 	position: absolute;
 	top: 0px;
-	left: 300px;
+	left: 0px;
 	width: 440px;
 }
 
@@ -76,10 +66,9 @@
 }
 
 .st-overview .st-overview-item .st-overview-label {
+	color: #0000cc;
 	display: inline-block;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
-	font-weight: bolder;
-	width: 70px;
+	width: 130px;
 }
 
 .st-overview .st-overview-item .st-overview-value {
@@ -90,150 +79,17 @@
 	display: block;
 }
 
-/* demographics */
-
-.st-demographics {
-	position: absolute;
-	top: 0px;
-	left: 628px;
-	width: 200px;
-	height: 100px;
-}
-
-.st-demographics-item {
-	display: block;
-	font-size: 12px;
-	margin-top: 0.6px;
-	text-transform: uppercase;
-}
-
-.st-demographics .st-demographics-item .st-demographic-label {
-	display: inline-block;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
-	font-weight: bolder;
-	width: 60px;
-}
-
-/* stress */
-.st-stress {
-	position: absolute;
-	top: 120px;
-	left: 300px;
-	width: 800px;
-}
-
-.st-stress .st-stress-item {
-	font-size: 10px;
-	display: block;
-	height: 18px;
-	padding: 0px;
-	
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-o-border-radius: 2px;
-}
-
-.st-stress .st-stress-item .st-stress-item-checkbox {
-	border-left: 1px solid #000;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
-	display: inline-block;
-	width: 16px;
-
-	background-color: #fff;	
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-o-border-radius: 2px;
-}
-
-.st-stress .st-stress-item .st-stress-item-checkbox.is-not-visible.first {
-	border-left: 1px solid #000;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	display: inline-block;
-	width: 16px;
-
-	background-color: #fff;	
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-o-border-radius: 2px;
-}
-
-.st-stress .st-stress-item .st-stress-item-checkbox.is-not-visible {
-	border-left: 1px solid #fff;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	display: inline-block;
-	width: 16px;
-
-	background-color: #fff;	
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-o-border-radius: 2px;
-}
-
-.st-stress .st-stress-item .st-stress-item-desc {
-	border-left: 2px solid #000;
-	border-top: 1px solid #000;
-	border-right: 1px solid #000;
-	border-bottom: 1px solid #000;
-	display: inline-block;
-	width: 100px;
-	text-align: center;
-	
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-o-border-radius: 2px;
-}
-
-.st-stress .st-stress-item .st-stress-item-checkbox-5,
-.st-stress .st-stress-item .st-stress-item-checkbox-10,
-.st-stress .st-stress-item .st-stress-item-checkbox-15 {
-	border-width: 1px 0px 1px 2px;
-}
-
-.st-stress .st-item.st-stress-header {
-	font-size: 12px;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
-	font-weight: bolder;
-	text-transform: uppercase;
-	width: 200px;
-}
-
-.st-stress .st-item.st-stress-header .st-stress-header-stress {
-	display: inline-block;
-	font-size: 12px;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
-	font-weight: bolder;
-	text-transform: uppercase;
-	width: 322px;
-}
-
-.st-stress .st-item.st-stress-header .st-stress-header-penalty {
-	font-size: 12px;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
-	font-weight: bolder;
-	text-transform: uppercase;
-	width: 200px;
-}
-
 /* attributes */
 
 .st-attributes {
 	position: absolute;
-	top: 250px;
-	left: 0px;
-	width: 604px;
+	top: 0px;
+	left: 400px;
+	width: 600px;
 }
 
 .st-attribute {
 	display: block;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
 	font-size: 12px;
 	height: 20px;
 	margin: 0 0 0 0;
@@ -243,7 +99,6 @@
 
 .st-attribute .st-attribute-label {
 	display: inline-block;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
 	font-weight: bolder;
 	text-align: center;
 	vertical-align: top;
@@ -251,15 +106,14 @@
 }
 
 .st-attribute .st-attribute-label [class^=char] {
+	color: #0000cc;
 	display: inline-block;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
 	text-align: center;
 	width: 14px;
 }
 
 .st-attribute .st-attribute-value {
 	display: inline-block;
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
 	font-weight: bolder;
 	text-align: center;
 	width: 40px;
@@ -360,7 +214,6 @@
 }
 
 .st-skills-title {
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
 	font-weight: bolder;	
 	text-transform: uppercase;
 }

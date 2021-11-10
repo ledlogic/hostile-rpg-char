@@ -1,22 +1,18 @@
 {
     "meta": [
-        {
-            "name": "Monica Gellar",
-            "job": "Chef",
-            "rank": "Technician / Senior Agent",
-            "terms": "2",
-            "age": "30",
-            "nationality": "American"
-        }
+		{"name": "Monica Gellar"},
+        {"job": "Chef"},
+        {"rank": "Technician / Senior Agent"},
+        {"terms": "2"},
+        {"age": "30"},
+        {"nationality": "American"}
     ],
     "profile": [
-    	{
-    		"str": 11,
-    		"dex": 10,
-    		"end": 4,
-    		"int": 9,
-    		"edu": 6,
-    		"soc": 7
-    	}
+		{"str": 11},
+		{"dex": 10},
+		{"end": 4},
+		{"int": 9},
+		{"edu": 6},
+		{"soc": 7}
     ]
 }

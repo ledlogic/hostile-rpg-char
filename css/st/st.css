@@ -1,11 +1,11 @@
 /* st.css */
 
 * {
-	font-family: 'AYT Avalon', sans-serif;
+	font-family: 'Michroma', sans-serif;
 }
 
 p {
-	font-family: 'AYT Avalon', sans-serif;
+	font-family: 'Michroma', sans-serif;
 }
 
 body {
@@ -13,8 +13,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Microgramma Extd D Medium', 'Microgramma Extd D', sans-serif;
+	font-family: 'Michroma', sans-serif;
 	text-transform: uppercase;
+}
+
+label {
+	font-family: 'Michroma', sans-serif;
 }
 
 h1 {
@@ -27,9 +31,6 @@ h4 {
 
 .progress-bar {
 	background: #ac2629;
-}
-
-#st-select-char {
 }
 
 .st-nav {

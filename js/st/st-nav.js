@@ -37,6 +37,8 @@ st.nav = {
 		st.log("rendering chars");
 
 		var $sel = $("#st-select-char");
+		$sel.not(':first').remove();
+		
 		for (var i=0;i<st.nav.characters.length;i++) {
 			var character = st.nav.characters[i];
 			var option = new Option();
