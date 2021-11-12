@@ -22,5 +22,9 @@
 		{"Loader": 1},
 		{"Mechanical": 1},
 		{"Steward": 0}
+    ],
+    "work": [
+    	{"Technician-0": 4},
+    	{"Corp Agent-1": 8}
     ]
 }
