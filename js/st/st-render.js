@@ -28,15 +28,18 @@ st.render = {
 
 		// attr
 		var $attr = $("<div class=\"st-section st-attributes\"></div>");
-		_.each(profile[0], function(value, key) {
-			var hexValue = value.toString(16);
-			var mod = st.character.dm(value);
-			var modClass = st.render.modClass(mod);
-			var h = "<span class=\"st-attribute-label\">" + key + "</span> "
-			      + "<span class=\"st-attribute-value " + modClass + "\">" + hexValue + "</span>"
-			      + "<span class=\"st-attribute-mod " + modClass + "\">[" + mod + "]</span>";
-			var $elm = $("<span class=\"st-item st-attribute st-attribute-" + key + "\">" + h + "</span>");
-			$attr.append($elm);
+		_.each(profile, function(map) {
+			_.each(map, function(value, key) {
+				//st.log(map);
+				var hexValue = value.toString(16);
+				var mod = st.character.dm(value);
+				var modClass = st.render.modClass(mod);
+				var h = "<span class=\"st-attribute-label\">" + key + "</span> "
+				      + "<span class=\"st-attribute-value " + modClass + "\">" + hexValue + "</span>"
+				      + "<span class=\"st-attribute-mod " + modClass + "\">[" + mod + "]</span>";
+				var $elm = $("<span class=\"st-item st-attribute st-attribute-" + key + "\">" + h + "</span>");
+				$attr.append($elm);
+			});
 		});
 		st.render.$pageft.append($attr);
 		
@@ -65,18 +68,21 @@ st.render = {
 
 		// page
 		var $overview = $("<div class=\"st-section st-overview\"></div>");
-		_.each(meta[0], function(value, key) {
-			var h = "<span class=\"st-overview-label\">" + key + "</span> "
-			      + "<span class=\"st-overview-value\">" + value + "</span>";
-			if (h.indexOf(",") > -1) {
-				h = h.split(",");
-				h = h.join("<br/>");
-			}
-			if (!h) {
-				h = "&nbsp;";
-			}
-			var $elm = $("<span class=\"st-item st-overview-item st-overview-item-" + key + "\">" + h + "</span>");
-			$overview.append($elm);
+		_.each(meta, function(map) {
+			_.each(map, function(value, key) {
+				//st.log(map);
+				var h = "<span class=\"st-overview-label\">" + key + "</span> "
+				      + "<span class=\"st-overview-value\">" + value + "</span>";
+				if (h.indexOf(",") > -1) {
+					h = h.split(",");
+					h = h.join("<br/>");
+				}
+				if (!h) {
+					h = "&nbsp;";
+				}
+				var $elm = $("<span class=\"st-item st-overview-item st-overview-item-" + key + "\">" + h + "</span>");
+				$overview.append($elm);
+			});
 		});
 		st.render.$pageft.append($overview);
 	},

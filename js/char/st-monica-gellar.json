@@ -3,8 +3,8 @@
 		{"name": "Monica Gellar"},
         {"job": "Chef"},
         {"rank": "Technician / Senior Agent"},
-        {"terms": "2"},
-        {"age": "30"},
+        {"terms": 2},
+        {"age": 30},
         {"nationality": "American"}
     ],
     "profile": [
