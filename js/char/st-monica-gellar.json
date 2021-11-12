@@ -14,5 +14,13 @@
 		{"int": 9},
 		{"edu": 6},
 		{"soc": 7}
+    ],
+    "skills": [
+		{"Bribery": 1},
+		{"Carousing": 0},
+		{"Comms": 1},
+		{"Loader": 1},
+		{"Mechanical": 1},
+		{"Steward": 0}
     ]
 }

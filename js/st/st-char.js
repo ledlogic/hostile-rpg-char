@@ -15,7 +15,7 @@ st.character = {
 	},
 	loadCharJson: function(uri) {
 		st.log("loading char from json, uri[" + uri + "]");
-		$.ajax(uri)
+		$.ajax(uri+"?" + (new Date()).getTime())
 			.done(function(data, status, jqxhr) {
 				st.character.data = data;
 				//st.log(["data", data]);

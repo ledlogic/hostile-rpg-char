@@ -31,6 +31,11 @@
 	border: 1px solid #ff0000;
 }
 
+.st-section-title {
+	font-weight: bolder;	
+	text-transform: uppercase;
+}
+
 .st-item {
 	border: 1px solid #cc0000;
 }
@@ -99,8 +104,7 @@
 
 .st-attribute .st-attribute-label {
 	display: inline-block;
-	font-weight: bolder;
-	text-align: center;
+	text-align: left;
 	vertical-align: top;
 	width: 50px;
 }
@@ -114,7 +118,6 @@
 
 .st-attribute .st-attribute-value {
 	display: inline-block;
-	font-weight: bolder;
 	text-align: center;
 	width: 40px;
 }
@@ -134,100 +137,15 @@
     width: 300px;
 }
 
-/* combat */
-
-.st-combat {
-	position: absolute;
-	top: 250px;
-	left: 604px;
-	width: 320px;
-}
-
-.st-combat .st-attribute .st-attribute-value {
-	text-align: left;
-	width: 220px;
-}
-
-/* endurance */
-
-.st-endurance {
-	position: absolute;
-	top: 254px;
-	left: 78px;
-	width: 352px;
-}
-
-.st-endurance-item {
-	display: inline-block;
-	float: left;
-	font-size: 10px;
-	font-weight: bold;
-	height: 16px;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	position: relative;
-	text-align: center;
-	width: 87.4px;
-}
-
-.st-endurance-item-inactsave {
-	visibility: hidden;
-}
-
-.st-endurance-item-uncthresh {
-	visibility: hidden;
-}
-
-.st-endurance-item-woundhealrate {
-	margin: 12px 0 0 0;
-}
-
-.st-endurance-item-fathealrate {
-	margin: 12px 0 0 0;
-}
-
-/* stats */
-
-.st-stats {
-	position: absolute;
-	top: 282px;
-	left: 506px;
-}
-
-.st-stat {
-	display: inline-block;
-	margin: 0 0 0 0;
-	text-align: center;
-	width: 44.8px;
-}
-
-.border .st-skills {
-	border: 1px solid orange;
-}
+/* skills */
 
 .st-skills {
+	left: 400px;
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	top: 480px;
-	width: 100px;
-}
-
-.st-skills-title {
-	font-weight: bolder;	
-	text-transform: uppercase;
-}
-
-.st-skills-0 {
-	left: 0px;
-}
-
-.st-skills-1 {
-	left: 340px;
-}
-
-.st-skills-2 {
-	left: 680px;
+	top: 160px;
+	width: 400px;
 }
 
 .st-skill {
@@ -236,21 +154,18 @@
 }
 
 .st-skill-item-key {
-	position: absolute;
 	display: inline-block;
 	font-size: 12px;
 	left: 0px;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	text-align: center;
-	width: 30px;
+	text-align: left;
+	width: 130px;
 }
 
 .st-skill-item-stat {
-	position: absolute;
 	display: inline-block;
 	font-size: 10px;
-	left: 116px;
 	margin: 2px 0 0 0;
 	padding: 0 0 0 0;
 	text-align: left;
@@ -268,56 +183,10 @@
 	color: blue;
 }
 
-.st-hp-box {
-	position: absolute;
-	border: 1px solid #000 !important;
-	display: inline-block;
-	height: 100px;
-	width: 288px;
-	top: 360px;
-	left: 608px;
-}
-
-.no-border .st-skill-item-key, .st-skill-item-key {
-	border-bottom: 1px solid #ccc;
-	position: absolute;
-	display: inline-block;
-	font-size: 12px;
-	left: 0px;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	text-align: left;
-	width: 177px;
-}
-
-.no-border .st-skill-item, .st-skill-item {
-	border-bottom: 1px solid #ccc;
-	position: absolute;
-	display: inline-block;
-	font-size: 12px;
-	left: 186px;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	text-align: center;
-	width: 30px;
-}
-
-.st-section.st-grid {
-	border: 1px solid #333333;
-	position: absolute;
-	top: 990px;
-	height: 280px;
-	width: 896px;
-}
-
 .st-equipment-item {
 	clear: both;
 	font-size: 12px;
 	margin: 20px 0;
-}
-
-.st-equipment-item dt.st-equipment-name {
-	font-weight: bold;
 }
 
 .st-equipment-item dt, .st-equipment-item dd {
@@ -326,18 +195,3 @@
 	margin: 0 4px;
 }
 
-.st-skill-extreme {
-	color: blue;
-	font-weight: bold;
-}
-
-.st-skill-high {
-	color: green;
-	font-weight: bold;
-}
-
-.st-skill-medium {
-}
-
-.st-skill-low {
-}

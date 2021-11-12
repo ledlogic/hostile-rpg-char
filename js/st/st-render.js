@@ -14,6 +14,7 @@ st.render = {
 		that.renderReset();		
 		that.renderOverview();
 		that.renderAttributes();
+		that.renderSkills();
 		
 		$(".st-page").removeClass("st-initial-state");
 	},
@@ -25,9 +26,8 @@ st.render = {
 		st.log("rendering attributes");
 
 		var profile = st.character.data.profile;
-
-		// attr
 		var $attr = $("<div class=\"st-section st-attributes\"></div>");
+		$attr.append("<div class=\"st-section-title\">Profile</div>");
 		_.each(profile, function(map) {
 			_.each(map, function(value, key) {
 				//st.log(map);
@@ -64,10 +64,9 @@ st.render = {
 		st.log("rendering overview");
 
 		var meta = st.character.data.meta;
-		//st.log(["meta", meta]);
-
-		// page
 		var $overview = $("<div class=\"st-section st-overview\"></div>");
+		$overview.append("<div class=\"st-section-title\">Personal</div>");
+
 		_.each(meta, function(map) {
 			_.each(map, function(value, key) {
 				//st.log(map);
@@ -89,46 +88,19 @@ st.render = {
 	renderSkills: function() {
 		st.log("rendering skills");
 
-		var spec = st.character.spec;
-		var skills = spec.skills;
+		var skills = st.character.data.skills;		
+		var $skills = $("<div class=\"st-section st-skills\"></div>");
+		$skills.append("<div class=\"st-section-title\">Skills</div>");
 		
-		// there are three sets of skills, to match the display
-		for (var i=0;i<3;i++) {
-			var skillsI = skills[i];
-			var y = 20;
-			var title = (i===0) ? "Skills" : "";
-			var $skillsI = $("<div class=\"st-section st-skills st-skills-" + i + "\"><span class=\"st-skills-title st-item\">" + title + "</span></div>");
-			_.each(skillsI, function(value, key) {
-				var h = value + "";
-				if (!h) {
-					h = "&nbsp;"
-				}
-				var elm = "";
-				var classKey = key;
-				var dispKey = _.capitalize2(key.replace(/-/g, ' '));
-				
-				var stat = st.character.relStat[key].value;
-				//st.log(st.character.relStat);
-
-				var hclass = st.render.calcSkillClass(h);
-				
-				if (dispKey) {
-					elm += ("<span class=\"st-item st-skill-item-key st-skill-item-key-" + classKey + " " + hclass + "\""
-							+" style=\"top: " + y + "px\""
-							+">" + dispKey + "</span>");
-				}
-				elm += ("<span class=\"st-item st-skill-item-stat st-skill-item-" + key + " " + hclass + "\""
-						+" style=\"top: " + y + "px\""
-						+">" + stat + "</span>");
-
-				elm += ("<span class=\"st-item st-skill-item st-skill-item-" + key + " " + hclass + "\""
-						+" style=\"top: " + y + "px\""
-						+">" + h + "</span>");
-				
-				$skillsI.append(elm);
-				y += 20;
+		_.each(skills, function(map) {
+			_.each(map, function(value, key) {
+				//st.log(map);
+				var h = "<span class=\"st-skill-item-key\">" + key + "</span> "
+				      + "<span class=\"st-skill-item-stat\">" + value + "</span>";
+				var $elm = $("<span class=\"st-skill st-skill-item st-skill-item-" + key + "\">" + h + "</span>");
+				$skills.append($elm);
 			});
-			st.render.$pageft.append($skillsI);
-		}		
+		});
+		st.render.$pageft.append($skills);
 	}
 };
