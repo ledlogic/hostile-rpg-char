@@ -12,6 +12,7 @@ var st = {
 	},
 
 	init: function() {
+		st.weapons.init();
 		st.character.init();
 		st.nav.init();
 		st.render.init();

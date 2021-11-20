@@ -1,4 +1,4 @@
-Name,Cost ($),Wgt (Kg),ROF,Range,Dmg,Recoil,Lgth (cm),Rds
+Name,Cost,Weight,ROF,Range,Damage,Recoil,Length,Rounds
 ASA Taurus Auto [7.65mm],300,1.2,1/4/10,pistol,2D6,5,24,20
 Noricum M44 Revolver [.44 Mag],650,1.25,1,pistol,2D6+2,9,29,6
 Stern Weapons VP90 [10mm Corta],200,0.8,1/4,pistol,2D6+1,8,20,16
@@ -9,14 +9,24 @@ Automat Kaliningrad AKZ-4 [6.50mm],1600,3.6,1/4/10,assault,3D6,6,78,30
 Maverick M24A1 ACR [8.85mmCL],2000,4.6,1/4/10,assault,3D6+2,7,80,60
 Maverick M24A3 Carbine [8.85mmCL],1600,3.6,1/4/10,assault,3D6,6,78,30
 Singapore Arms SA66 [6.50mm],1000,3.3,1/4/10,assault,3D6,7,75,25
-Universal T51 ,1000,3.3,1/4/10,assault,3D6,7,75,25
+Universal T51,1000,3.3,1/4/10,assault,3D6,7,75,25
 Voroncovo M33 Coilgun [12mm HVADS],3000,5.5,1,rifle,4D6+2,8,103,10
 Zenith M1000 30MW Combat Laser,3500,4.2,1,rifle,4D6+2,-,80,10
 ASA Hoplite Combat Shotgun [12 gauge],2000,3.8,1/4,shotgun,4D6,6,81,8
-Noricum 37 Stakeout [12 gauge",600,3,1,pistol,4D6,9,76,4
+"Noricum 37 Stakeout [12 gauge""",600,3,1,pistol,4D6,9,76,4
 Stern Weapons 2000 Shotgun [12 gauge],780,3,1,shotgun,4D6,8,77,5
-ASA M3 Hydra IMAG [9mm HE] ,5000,16,4/10,rifle,3D6+4,7,122,250
+ASA M3 Hydra IMAG [9mm HE],5000,16,4/10,rifle,3D6+4,7,122,250
 Maverick Defense M68 Light Machine Gun [8.85mmCL],2800,6.6,1/4/10,rifle,3D6+2,6,90,100
 Steyr-Brandt StG 340 [8.85mmCL],2300,6.2,1/4/10, rifle,3D6+3,5,86,100
 Voroncovo M5A5 Auto Coilgun [12mm HVADS],12000,9.5,1/4/10,Rifle,4d6+2,4,105,100
 MLT Flame Unit,500,2.5,4,pistol,2D6,5,70,6
+Unarmed Strike,--,--,1,melee (close quarters),1D6,-,-,-
+Short Club,--,1,1,melee (close quarters),2D6,-,-,-
+Long Club,--,2,1,melee (extended reach),2D6-1,-,-,-
+"Knife, Expedition",60,0.25,1,melee (close quarters),2D6,-,-,-
+"Knife, Combat",120,0.25,1,melee (close quarters),2D6+1,-,-,-
+Short Spike,--,1,1,melee (close quarters),2D6-1,-,-,-
+Long Spike,--,1.5,1,melee (extended reach),2D6-1,-,-,-
+"Axe, Expedition",30,2.5,1,melee (extended reach),3D6-1,-,-,-
+Folding Spade,30,1.5,1,melee (close quarters),2D6-2,-,-,-
+Machete,50,0.35,1,melee (extended reach),3D6-1,-,-,-
