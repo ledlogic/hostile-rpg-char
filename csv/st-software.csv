@@ -1,0 +1,16 @@
+SOFTWARE,Rating,Cost ($),Description,,,,,,,,,
+DNA Database,1,"1,000",Full DNA listing of a colony’s population (restricted).,,,,,,,,,
+Criminal Record Database,1,"2,000",Complete and detailed listing of criminal records (restricted).,,,,,,,,,
+Census Database,1,500,A nation’s census details from 1945 to 2225.,,,,,,,,,
+Vehicle Registration Database,1,2000,"Current database of vehicle owners, registrations and vehicle types (restricted).",,,,,,,,,
+Graphic Design,2,1000,"A 3D graphic design package used to layout and virtually test electrical or mechanical devices, machines, vehicles or buildings.",,,,,,,,,
+Image Editor,1,600,"Used to modify, retouch or simply create images digitally. Able to scan into the computer, analyze and modify.",,,,,,,,,
+Predictive Modelling,3,3000,"This software is able to create complex and immersive data models that will be displayed on single colour monitors. Such models might include the activities of a volcano, the spread of a disease, the learning abilities of a rogue AI or the effects of virus etc.",,,,,,,,,
+Audio/Visual Analysis,1,900,"Sound or video data input from a data card or optical disc can be studied, investigated, scrutinized and isolated in order to find clues or look for evidence.",,,,,,,,,
+Translator/1,1,100,Translators are specialized Expert systems that only have language skills. Near-real-time translation.,,,,,,,,,
+Translator/2,2,1000,Translators are specialized Expert systems that only have language skills. Works in real-time and has a much better understanding of the nuances of language.,,,,,,,,,
+Voice- Activated Interface,1,100,Simple artificial intelligence allows voice control and displays data intelligently. Required for using Expert programs.,,,,,,,,,
+Expert Skill Base/1,1,1000,"Expert programs are interactive skill databases, able to provide intelligent solutions to problems on the fly. A character using an expert system may make a skill check as if he had the skill at the program’s Rating –1. The following skills are Expert capable: Comms, Electronics, Mechanical, Medical, Security, Administration and, if run by an android or robot, Ground Vehicle and Hovercar.",,,,,,,,,
+Expert Skill Base/2,2,10000,"Expert programs are interactive skill databases, able to provide intelligent solutions to problems on the fly. A character using an expert system may make a skill check as if he had the skill at the program’s Rating –1. The following skills are Expert capable: Comms, Electronics, Mechanical, Medical, Security, Administration and, if run by an android or robot, Ground Vehicle and Hovercar.",,,,,,,,,
+Expert Skill Base/3,3,100000,"Expert programs are interactive skill databases, able to provide intelligent solutions to problems on the fly. A character using an expert system may make a skill check as if he had the skill at the program’s Rating –1. The following skills are Expert capable: Comms, Electronics, Mechanical, Medical, Security, Administration and, if run by an android or robot, Ground Vehicle and Hovercar.",,,,,,,,,
+Intellect Control,1,2000,"Intellect Control allows machinery to use Expert systems. For example, a robot doctor might be running Intellect Control/1 and Expert Skill Medic/3, giving it a Medic skill of 2. An Intellect Control program can use a number of skills simultaneously equal to its Rating.",,,,,,,,,
