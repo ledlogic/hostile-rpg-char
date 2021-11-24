@@ -12,6 +12,9 @@ var st = {
 	},
 
 	init: function() {
+		st.armor.init();
+		st.equipment.init();
+		st.software.init();
 		st.weapons.init();
 		st.character.init();
 		st.nav.init();

@@ -4,32 +4,30 @@ st.weapons = {
 	
 	init: function() {
 		st.log("init weapons");
-		st.weapons.loadWeaponsCsv();
+		st.weapons.request();
 	},
 	
-	loadWeaponsCsv: function(uri) {
-		st.log("loading char from csv, uri[" + uri + "]");
+	request: function(uri) {
+		st.log("requesting weapons from csv, uri[" + uri + "]");
 		
 		Papa.parse("csv/st-weapons.csv", {
 			delimiter: ",",
 			download: true,
 			header: true,
 			complete: function(d) {
-				st.weapons.charResponse(d);
+				st.weapons.response(d);
 			},
 			encoding: "UTF-8"
 		});
 	},
 	
-	charResponse: function(d) {
-		st.log("char response");
-		
+	response: function(d) {
+		st.log("weapons response");
+
 		var fields = d.meta.fields;
 		var data = d.data;
-		
-		st.log(fields);
-		st.log(data);
-		
-	},
+		st.weapons.fields = fields;
+		st.weapons.data = data;
+	}
 
 };
