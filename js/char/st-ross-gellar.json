@@ -1,0 +1,31 @@
+{
+    "meta": [
+		{"name": "Ross Gellar"},
+        {"job": "Paleontologist"},
+        {"rank": "Researcher Agent"},
+        {"terms": 2},
+        {"age": 29},
+        {"nationality": "American"}
+    ],
+    "profile": [
+		{"str": 10},
+		{"dex": 6},
+		{"end": 3},
+		{"int": 10},
+		{"edu": 8},
+		{"soc": 7}
+    ],
+    "skills": [
+		{"Admin": 1},
+		{"Brawling (Unagi)": 0},
+		{"Computer": 0},
+		{"Investigate": 1},
+		{"Security": 1}
+    ],
+    "work": [
+    	{"Scientist-0": 4},
+    	{"Corp Agent-0": 4}
+    ],
+    "weapons": [
+    ]
+}
